@@ -1,3 +1,5 @@
+import os
+
 from fastapi.testclient import TestClient
 
 from app.main import app
@@ -11,7 +13,7 @@ def get_member_token():
         "/auth/login",
         json={
             "email": "newuser789@example.com",
-            "password": "Member12345"
+            "password": os.getenv("TEST_MEMBER_PASSWORD")
         }
     )
 

@@ -1,3 +1,5 @@
+import os
+
 from fastapi.testclient import TestClient
 
 from app.main import app
@@ -11,7 +13,7 @@ def get_admin_token():
         "/auth/login",
         json={
             "email": "mahendra@example.com",
-            "password": "Admin12345"
+            "password": os.getenv("TEST_ADMIN_PASSWORD")
         }
     )
 
