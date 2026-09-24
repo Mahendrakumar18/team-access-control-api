@@ -48,3 +48,18 @@ The API uses JWT bearer tokens for authentication.
 
 ```http
 POST /auth/register
+
+
+## Running Tests
+
+Activate the virtual environment and run:
+
+```bash
+python -m pytest -q
+```
+
+Expected result:
+
+```text
+7 passed
+```
